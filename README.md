@@ -4,39 +4,41 @@
 
 # Bash script System Authomation Project
 
-This collection of Bash scripts is designed to automate various system-related tasks, including creating backups, generating system metrics reports, and backing up Oracle schemas. The project consists of three individual scripts, each serving a specific purpose.
+This to automate and performe various system-related tasks, This includes creating backups, generating system metrics reports, and backing up Oracle schemas. The project consists of three individual scripts, each serving different and specific purpose.
 
 
-**Author: Stanley Chinedu Ogada**
+**Written By Agbedeyi Segun Olatunde**
+
+
+
 
 ## Prerequisites
 
-Before running the scripts, ensure the following prerequisites are met:
+Ensure the following prerequisites are met:
 
-1. **File Permissions:**
+I.   **File Permissions:**
    - Give execute permissions to the main script.
      ```bash
-     chmod 700 main.sh
+     chmod 700 script.sh
      ```
-
-2. **Crontab Configuration:**
+II.  **Crontab -e Entry**
    - Edit the crontab document to schedule the script execution.
      ```bash
      crontab -e
      ```
    - Add the following line to run the script every Sunday at 2 PM.
      ```bash
-     0 14 * * 0 /path/to/main.sh
+     0 14 * * 0 /path/to/script.sh
      ```
 
-3. **Directory Setup:**
-   - Create a directory for your scripts and place the main script in it.
+     **Directory Setup:**
+III. - Create a directory for your scripts and place the main script in it.
      ```bash
      mkdir $HOME/week6_scripts
-     touch $HOME/week6_scripts/main.sh && chmod 777 $HOME/week6_scripts/main.sh
+     touch $HOME/week6_scripts/script.sh && chmod 777 $HOME/week6_scripts/script.sh
      ```
 
-IV. **Update PATH:**
+IV.  **Update PATH:**
    - Add the script directory to the $PATH environment variable in your .bashrc file.
      ```bash
      echo "PATH=\$PATH:$HOME/week6_scripts" >> $HOME/.bashrc && PATH=\$PATH:$HOME/week6_scripts
@@ -86,7 +88,7 @@ Run the script manually.
 ### Description
 
 - Generates a final report that tabulates preceding details and emails the report to `martin.mato@ingrydacademy.com`.
-- Requires the installation of `mutt` for email functionality.
+- The installation of `mutt` for email functionality is required.
 
 
 ## Note
@@ -95,9 +97,8 @@ Run the script manually.
 - Monitor the script outputs for any errors or warnings.
 - Customize the scripts and parameters based on your specific requirements.
 
-Feel free to contribute to this Bash project or raise issues if you encounter any problems. Happy scripting!
+Feel free to contribute to this Bash project or raise issues if you encounter any problems.
 
 
-*Note: This documentation was authored by Stanley Chinedu Ogada. If you have any questions or encounter issues, feel free to reach out for personalized assistance.*
 
 
